@@ -5,6 +5,11 @@ Overview
 --------
 An end‑to‑end system for ecommerce customer intelligence: it ingests the UCI *Online Retail II* dataset, performs robust preprocessing & feature engineering (RFM + behavioral enrichments), explores static clustering methods (KMeans, GMM, DBSCAN) as well as incremental / streaming segmentation (MiniBatchKMeans), tracks customer movements between segments over simulated time, and presents an interactive Streamlit dashboard with dynamic visualizations, churn risk estimation, and batch/stream mode.
 
+<img width="1883" height="845" alt="image" src="https://github.com/user-attachments/assets/052aa569-fbd0-4562-a443-8ae0a0002208" />
+<img width="1539" height="827" alt="image" src="https://github.com/user-attachments/assets/82fbffd6-2f1f-44e8-8c22-b6e3c948094b" />
+
+
+
 Motivation
 ----------
 Traditional segmentation runs offline on historical snapshots and becomes stale as customer behavior shifts. Modern personalization, retention, and lifecycle marketing need:
