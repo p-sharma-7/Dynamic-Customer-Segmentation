@@ -1,0 +1,10 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+streamlit
+plotly
+umap-learn # For dimensionality reduction
+tqdm # For progress bars
+river # For online machine learning
