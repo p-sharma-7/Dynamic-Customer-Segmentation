@@ -94,25 +94,37 @@ System Architecture Phases
 File / Module Structure
 -----------------------
 ```
-data/
-  raw/
-	 ecommerce-dataset/online_retail_II.csv          # Fixed input dataset
-  processed/                                        # Generated artifacts (RFM, features)
-  streaming/                                       # (Optional) prepared streaming slices
-notebooks/
-  Exploration.ipynb                                # Initial EDA / feature validation
-src/
-  __init__.py                                      # Public API exports
-  data_preprocessing.py                            # Load, clean, feature engineering, scaling
-  clustering_engine.py                             # Static & incremental clustering logic
-  stream_simulator.py                              # Batch generator (day / week / rows)
-  segment_tracking.py                              # Transition & size tracking
-  churn_predictor.py                               # Baseline logistic churn model
-  visual_dashboard.py                              # Plotly helper utilities
-app.py                                             # Streamlit dashboard (fixed dataset path)
-run.sh                                             # Convenience launcher (bash)
-requirements.txt                                   # Python dependencies
-README.md                                          # (This file)
+adaptive-customer-segmentation/
+│
+├── data/
+│   ├── raw/
+│   │   └── online_retail.csv          # original dataset from UCI
+│   ├── processed/
+│   │   └── customer_features.csv      # preprocessed features (RFM etc.)
+│   └── streaming/
+│       └── stream_batches/            # small batch chunks to simulate streaming
+│
+├── notebooks/
+│   ├── 01_exploration.ipynb           # data exploration + preprocessing
+│   ├── 02_feature_engineering.ipynb   # build customer features (RFM)
+│   └── 03_clustering_experiments.ipynb# test clustering algorithms
+│
+├── src/
+│   ├── __init__.py
+│   ├── data_preprocessing.py          # clean data, generate features
+│   ├── stream_simulator.py            # feeds batches of transactions
+│   ├── clustering_engine.py           # MiniBatchKMeans/river for incremental clustering
+│   ├── segment_tracker.py             # track customers switching segments
+│   ├── churn_predictor.py             # optional: predict churn-risk
+│   └── visualization_dashboard.py     # backend functions for Streamlit
+│
+├── dashboard/
+│   └── app.py                         # Streamlit app entry point
+│
+├── requirements.txt                   # Python dependencies
+├── README.md                          # Project description + usage
+└── run.sh                             # script to start pipeline + dashboard
+
 ```
 
 Key Design Choices
