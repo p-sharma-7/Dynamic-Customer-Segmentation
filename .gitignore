@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Data and model files
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.db
+*.sqlite
+*.h5
+*.pkl
+*.joblib
+*.npy
+*.npz
+
+# Environment
+.env
+.venv/
+env/
+venv/
+pip-log.txt
+pip-delete-this.txt
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Others
+*.bak
+*.swp
+*.tmp
