@@ -1,5 +1,7 @@
-AI-Powered Customer Segmentation & Adaptive Streaming Dashboard
+Dynamic Customer Segmentation & Adaptive Streaming Dashboard
 ================================================================
+
+check it out **[link for Streamlit app](https://p-sharma-7-dynamic-customer-segmentation-app-bxhjqc.streamlit.app/)**
 
 Overview
 --------
